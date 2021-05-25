@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 
 import WelcomePage from "./src/screens/WelcomePage";
-import Home from "./src/screens/HomePage";
+import HomePage from "./src/screens/HomePage";
 import DetailedPage from "./src/screens/DetailedPage";
 import ProfilePage from "./src/screens/ProfilePage";
 
@@ -24,26 +24,26 @@ export default function App() {
           name="Welcome" component={WelcomePage}
         />
 
-        {/* <Stack.Screen
+         <Stack.Screen
           options={{
             header: () => null
           }}
           name="Home" component={HomePage}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           options={{
             header: () => null
           }}
           name="Detailed" component={DetailedPage}
-        />
+        /> */}
 
-        <Stack.Screen
+        {/* <Stack.Screen
           options={{
             header: () => null
           }}
           name="Profile" component={ProfilePage}
-        /> */}
+        />  */}
       </Stack.Navigator>
 
 
@@ -51,11 +51,11 @@ export default function App() {
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+  // },
+// });
