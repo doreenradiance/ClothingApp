@@ -38,12 +38,12 @@ export default function App() {
           name="Detailed" component={DetailedPage}
         /> */}
 
-        {/* <Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
           name="Profile" component={ProfilePage}
-        />  */}
+        /> 
       </Stack.Navigator>
 
 
