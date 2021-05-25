@@ -11,7 +11,7 @@ function WelcomePage({ navigation }) {
                     navigation.navigate("Home")
                 }}>
             <Image source={require('../../assets/logo.jpeg')}
-             style={{ height: 200, width: "100%", marginTop: 50 }}
+             style={{ height: 300, width: "100%", marginTop: 50 }}
              />
              </TouchableOpacity>
         </View>
