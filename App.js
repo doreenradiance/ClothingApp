@@ -31,12 +31,12 @@ export default function App() {
           name="Home" component={HomePage}
         />
 
-        {/* <Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
           name="Detailed" component={DetailedPage}
-        /> */}
+        />
 
         <Stack.Screen
           options={{
