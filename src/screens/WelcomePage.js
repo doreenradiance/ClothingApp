@@ -1,4 +1,5 @@
 import React from "react"
+import { StyleSheet, Text,Image, View, TouchableOpacity } from 'react-native';
 
 function WelcomePage({ navigation }) {
 
@@ -6,11 +7,13 @@ function WelcomePage({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <View>
+            <TouchableOpacity  onPress={() => {
+                    navigation.navigate("Home")
+                }}>
             <Image source={require('../../assets/logo.jpeg')}
-            //  style={{ height: 80, width: 80, marginTop: 50 }}
+             style={{ height: 200, width: "100%", marginTop: 50 }}
              />
-            </View>
+             </TouchableOpacity>
         </View>
     )
 }
