@@ -3,10 +3,14 @@ import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView } from 'rea
 
 function HomePage({ navigation }) {
 
+DressTypes=[
+    {
 
+    }
+]
 
     return (
-        <View style={styles.container}>
+        <View style={styles.mainContainer}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: 30 }}>
                 <TouchableOpacity onPress={() => {
                     navigation.navigate("Welcome")
@@ -26,7 +30,7 @@ function HomePage({ navigation }) {
             <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 5 }}></Text>
 
             <ScrollView>
-                <View style={{ flexDirection: "row", justifyContent: "space-around", }}>
+                <View style={ styles.container}>
                     <TouchableOpacity
                         onPress={() => {
                             navigation.navigate("Detailed")
@@ -55,7 +59,7 @@ function HomePage({ navigation }) {
                 <Text style={{ backgroundColor: "#d6d4ce", height: 1,marginTop:10 }}></Text>
 
 
-                <View style={{ flexDirection: "row", justifyContent: "space-around", }}>
+                <View style={styles.container}>
                 <TouchableOpacity
                         onPress={() => {
                             navigation.navigate("Detailed")
@@ -83,7 +87,7 @@ function HomePage({ navigation }) {
                 </View>
                 <Text style={{ backgroundColor: "#d6d4ce", height: 1,marginTop:10 }}></Text>
 
-                <View style={{ flexDirection: "row", justifyContent: "space-around", }}>
+                <View style={styles.container}>
                 <TouchableOpacity
                         onPress={() => {
                             navigation.navigate("Detailed")
@@ -111,7 +115,7 @@ function HomePage({ navigation }) {
                 </View>
                 <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop:10}}></Text>
 
-                <View style={{ flexDirection: "row", justifyContent: "space-around", }}>
+                <View style={styles.container}>
                 <TouchableOpacity
                         onPress={() => {
                             navigation.navigate("Detailed")
@@ -146,12 +150,15 @@ function HomePage({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    mainContainer: {
         flex: 1,
         // backgroundColor: "#9c8035",
         // alignItems: 'center',
         // justifyContent: "space-around"
-    }
+    },
+   container: {
+        flexDirection: "row",
+         justifyContent: "space-around", }
 })
 
 export default HomePage;
