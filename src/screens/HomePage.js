@@ -1,13 +1,63 @@
 import React from "react"
-import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView, FlatList } from 'react-native';
+import SingleType from "../components/SingleType";
 
-function HomePage({ navigation }) {
 
-DressTypes=[
-    {
+const HomePage = ({ navigation }) => {
+    DressTypes = [
+        {
+            image: require('../../assets/dress.jpg'),
+            type: "Dress",
+            price: "Ghc 25.00",
+            button: "Shop Now",
+        },
 
-    }
-]
+        {
+            image: require('../../assets/ligerie.jpg'),
+            type: "Ligerie",
+            price: "Ghc 100.00",
+            button: "Shop Now",
+        },
+
+        {
+            image: require('../../assets/womentrouser.jpg'),
+            type: "Trouser",
+            price: "Ghc 50.00",
+            button: "Shop Now",
+        },
+
+        {
+            image: require('../../assets/womenskirt.jpg'),
+            type: "Skirt",
+            price: "Ghc 40.00",
+            button: "Shop Now",
+        },
+        {
+            image: require('../../assets/womenblouse.jpg'),
+            type: "Blouse",
+            price: "Ghc 50.00",
+            button: "Shop Now",
+        },
+        {
+            image: require('../../assets/tanktop.jpg'),
+            type: "Tank Top",
+            price: "Ghc 30.00",
+            button: "Shop Now",
+        },
+        {
+            image: require('../../assets/womenhoodie.jpg'),
+            type: "Hoodie",
+            price: "Ghc 80.00",
+            button: "Shop Now",
+        },
+        {
+            image: require('../../assets/womenjeans.jpg'),
+            type: "Jeans Top",
+            price: "Ghc 50.00",
+            button: "Shop Now",
+        },
+
+    ]
 
     return (
         <View style={styles.mainContainer}>
@@ -29,122 +79,20 @@ DressTypes=[
 
             <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 5 }}></Text>
 
-            <ScrollView>
-                <View style={ styles.container}>
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/dress.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Dress</Text>
-                        <Text>Ghc 25.00</Text>
-                        <Text style={{ color:"white",backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20,textAlign: "center" }}>Shop Now</Text>
-                    </TouchableOpacity>
 
-                    <Text style={{ backgroundColor: "#d6d4ce", width: 1, height: "100%" }}></Text>
+            <FlatList
+                data={DressTypes}
+                renderItem={({ item }) => {
+                    return <SingleType
+                        image={item.image}
+                        type={item.type}
+                        price={item.type}
+                        button={item.button}
+                        navigation={navigation}
+                    />
+                }}
+            />
 
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/ligerie.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Ligerie</Text>
-                        <Text>Ghc 100.00</Text>
-                        <Text style={{ color:"white",backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <Text style={{ backgroundColor: "#d6d4ce", height: 1,marginTop:10 }}></Text>
-
-
-                <View style={styles.container}>
-                <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/womentrouser.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Trouser</Text>
-                        <Text>Ghc 65.00</Text>
-                        <Text style={{color:"white", backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                    </TouchableOpacity>
-
-                    <Text style={{ backgroundColor: "#d6d4ce", width: 1, height: "100%" }}></Text>
-
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/womenskirt.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Skirt</Text>
-                        <Text>Ghc 20.00</Text>
-                        <Text style={{ color:"white",backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                        </TouchableOpacity>
-                        
-                </View>
-                <Text style={{ backgroundColor: "#d6d4ce", height: 1,marginTop:10 }}></Text>
-
-                <View style={styles.container}>
-                <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/womenblouse.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Blouse</Text>
-                        <Text>Ghc 65.00</Text>
-                        <Text style={{color:"white", backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                    </TouchableOpacity>
-
-                    <Text style={{ backgroundColor: "#d6d4ce", width: 1, height: "100%" }}></Text>
-
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/tanktop.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Tank Top</Text>
-                        <Text>Ghc 20.00</Text>
-                        <Text style={{ color:"white",backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                        </TouchableOpacity>
-                        
-                </View>
-                <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop:10}}></Text>
-
-                <View style={styles.container}>
-                <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/womenhoodie.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Hoodie</Text>
-                        <Text>Ghc 65.00</Text>
-                        <Text style={{color:"white", backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                    </TouchableOpacity>
-
-                    <Text style={{ backgroundColor: "#d6d4ce", width: 1, height: "100%" }}></Text>
-
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigation.navigate("Detailed")
-                        }}
-                    >
-                        <Image source={require('../../assets/womenjeans.jpg')} style={{ height: 100, width: 90, marginTop: 20 }} />
-                        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Jeans Top</Text>
-                        <Text>Ghc 20.00</Text>
-                        <Text style={{ color:"white",backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 20, textAlign: "center" }}>Shop Now</Text>
-                        </TouchableOpacity>
-                        
-                </View>
-                <Text style={{ backgroundColor: "#d6d4ce", height: 1,marginTop:10 }}></Text>
-
-                
-            </ScrollView>
         </View>
     )
 }
@@ -156,9 +104,10 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         // justifyContent: "space-around"
     },
-   container: {
+    container: {
         flexDirection: "row",
-         justifyContent: "space-around", }
+        justifyContent: "space-around",
+    }
 })
 
 export default HomePage;
