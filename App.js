@@ -8,6 +8,7 @@ import WelcomePage from "./src/screens/WelcomePage";
 import HomePage from "./src/screens/HomePage";
 import DetailedPage from "./src/screens/DetailedPage";
 import ProfilePage from "./src/screens/ProfilePage";
+import SingleType from './src/components/SingleType';
 
 const Stack = createStackNavigator()
 
@@ -44,6 +45,13 @@ export default function App() {
           }}
           name="Profile" component={ProfilePage}
         /> 
+
+<Stack.Screen
+          options={{
+            header: () => null
+          }}
+          name="Type" component={SingleType}
+        />
       </Stack.Navigator>
 
 
