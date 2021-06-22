@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity,FlatList } from 'react-native';
 import SingleType from "../components/SingleType";
 
 
@@ -100,9 +100,6 @@ const HomePage = ({ navigation }) => {
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        // backgroundColor: "#9c8035",
-        // alignItems: 'center',
-        // justifyContent: "space-around"
     },
     container: {
         flexDirection: "row",
