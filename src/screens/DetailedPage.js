@@ -1,6 +1,7 @@
 import React from "react"
-import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, Button, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+
 
 function DetailedPage(
     { route, navigation, type, price, image, button }
@@ -12,23 +13,29 @@ function DetailedPage(
         <View style={styles.container}>
             <View style={{ flexDirection: "row", marginTop: 50, justifyContent: 'space-around' }}>
                 <TouchableOpacity onPress={() => {
-                    navigation.navigate("Home",)
+                    navigation.navigate("Home", { image, type, price, button })
                 }}>
                     <MaterialIcons name="keyboard-backspace" size={24} color="black" />
                 </TouchableOpacity>
                 <Text style={{ fontSize: 35, fontWeight: "bold" }}>Checkout</Text>
             </View>
-            <Text style={{ backgroundColor: "#d6d4ce", height: 1, }}></Text>
+            <Text style={{ backgroundColor: "#d6d4ce", height: 2, }}></Text>
             <View>
                 <Image source={DressTypes.image}
-                    style={{ height: 250, width: 200, marginTop: 30, alignSelf:"center" }} />
-                <Text style={{ fontWeight: "bold", fontSize: 20,alignSelf:"center" }}>{type}</Text>
+                    style={{ height: 250, width: 200, marginTop: 30, alignSelf: "center" }} />
+                <Text style={{ fontWeight: "bold", fontSize: 20, alignSelf: "center" }}>{type}</Text>
                 <Text>{price}</Text>
             </View>
-            <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 10 }}></Text>
+            {/* <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 10 }}></Text> */}
             <View>
-                <View style={{ marginLeft: 30, }}>
-                    <Text style={{ color: "white", backgroundColor: "#db4460", height: 40, width: 300, borderRadius: 30, textAlign: "center" }}>Proceed to pay</Text>
+                <View style={{  }}>
+
+                        <Button style={{ borderRadius:90 }}
+                        onPress={() => Alert.alert("Paid")
+                        }
+                        title="Proceed to pay"
+                        color="#a83256"
+                        ></Button>
                 </View>
             </View>
         </View>
