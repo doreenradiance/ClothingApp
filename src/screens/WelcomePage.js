@@ -11,8 +11,9 @@ function WelcomePage({ navigation }) {
                     navigation.navigate("Home")
                 }}>
             <Image source={require('../../assets/logo.jpeg')}
-             style={{ height: 300, width: "100%", marginTop: 50 }}
-             />
+            // {/* <Text style={{ height: 300, width: "100%",  textAlign:"center",justifyContent:"space-around" }}>Deez_Hubtel</Text> */}
+            style={{ height: 300, width: "100%", marginTop: 50 }}
+            />
              </TouchableOpacity>
         </View>
     )
