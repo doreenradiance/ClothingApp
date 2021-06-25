@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, Image, View, TouchableOpacity,FlatList } from 'react-native';
-import SingleType from "../components/SingleType";
+// import SingleType from "../components/SingleType";
 
 
 const HomePage = ({ navigation }) => {
