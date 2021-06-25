@@ -3,7 +3,7 @@ import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 function DetailedPage(
-    { route, navigation, type, price, image,button }
+    { route, navigation, type, price, image, button }
 ) {
     let DressTypes = route.params;
 
@@ -21,15 +21,15 @@ function DetailedPage(
             <Text style={{ backgroundColor: "#d6d4ce", height: 1, }}></Text>
             <View>
                 <Image source={DressTypes.image}
-                    style={{ height: 250, width: 200, marginTop: 30, }} />
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}>hello</Text>
+                    style={{ height: 250, width: 200, marginTop: 30, alignSelf:"center" }} />
+                <Text style={{ fontWeight: "bold", fontSize: 20,alignSelf:"center" }}>{type}</Text>
                 <Text>{price}</Text>
             </View>
             <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 10 }}></Text>
             <View>
-            <View style={{ marginLeft: 30, }}>
-        //         <Text style={{color:"white", backgroundColor: "#db4460", height: 40, width: 300, borderRadius: 30, textAlign: "center" }}>Proceed to pay</Text>
-        //     </View>
+                <View style={{ marginLeft: 30, }}>
+                    <Text style={{ color: "white", backgroundColor: "#db4460", height: 40, width: 300, borderRadius: 30, textAlign: "center" }}>Proceed to pay</Text>
+                </View>
             </View>
         </View>
 
