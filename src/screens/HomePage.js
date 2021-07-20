@@ -78,7 +78,7 @@ const HomePage = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
 
-            <Text style={{ backgroundColor: "#d6d4ce", height: 1, marginTop: 5 }}></Text>
+            <Text style={{ backgroundColor: "#d6d4ce", height: 2, marginTop: 5 }}></Text>
 
 
             <FlatList

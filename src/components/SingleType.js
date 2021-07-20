@@ -18,10 +18,10 @@ function SingleType({ image, type, price, button, navigation }) {
                     <Text>{price}</Text>
                     <Text style={{ color: "white",marginBottom:10, backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 22, textAlign: "center" }}>{button}</Text>
                 </TouchableOpacity>
-                <Text style={{ backgroundColor: "#d6d4ce", width: 1,  }}></Text> 
+                <Text style={{ backgroundColor: "#d6d4ce", width: 2,  }}></Text> 
             </View>
          
-        <Text style={{ backgroundColor: "#d6d4ce", height: 1,  }}></Text> 
+        <Text style={{ backgroundColor: "#d6d4ce", height: 2,  }}></Text> 
         </ScrollView>
 
 
