@@ -17,17 +17,17 @@ function DetailedPage(
                 }}>
                     <MaterialIcons name="keyboard-backspace" size={24} color="black" />
                 </TouchableOpacity>
-                <Text style={{ fontSize: 35, fontWeight: "bold" }}>Checkout</Text>
+                <Text style={{ fontSize: 30, fontWeight: "bold" }}>Checkout</Text>
             </View>
             <Text style={{ backgroundColor: "#d6d4ce", height: 2, }}></Text>
             <View>
                 <Image source={DressTypes.image}
                     style={{ height: 250, width: 200, alignSelf: "center" }} />
-                <Text style={{ fontWeight: "bold", fontSize: 20, alignSelf: "center" }}>type</Text>
-                <Text style={{ fontSize: 20, alignSelf: "center"}}>price</Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, alignSelf: "center" }}>{DressTypes.type}</Text>
+                <Text style={{ fontSize: 20, alignSelf: "center"}}>{DressTypes.price}</Text>
             </View>
             <View>
-                <View style={{ marginHorizontal:20}}>
+                <View style={{ marginHorizontal:10}}>
 
                         <Button style={{  }}
                         onPress={() => Alert.alert("Paid")
@@ -44,7 +44,7 @@ function DetailedPage(
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent:"space-around"
+        justifyContent:"space-evenly"
     }
 })
 
