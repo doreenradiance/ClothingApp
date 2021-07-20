@@ -6,7 +6,7 @@ function ProfilePage({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <View style={{ flexDirection: "row", marginTop: 50, justifyContent: 'space-around' }}>
+            <View style={{ flexDirection: "row", marginTop: 50, justifyContent: 'space-evenly' }}>
                 <TouchableOpacity onPress={() => {
                     navigation.navigate("Home")
                 }}>
@@ -15,7 +15,7 @@ function ProfilePage({ navigation }) {
                 <Text style={{ fontSize: 35, fontWeight: "bold" }}>Profile</Text>
             </View>
 
-            <Text style={{ backgroundColor: "#d6d4ce", height: 2, }}></Text>
+            <Text style={{ backgroundColor: "#d6d4ce", height: 2, marginTop:10}}></Text>
 
             <View style={{ alignItems: 'center', }}>
                 <Image source={require('../../assets/DP.jpg')}
