@@ -7,19 +7,19 @@ function ProfilePage({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: "row", marginTop: 50, justifyContent: 'space-around' }}>
-            <TouchableOpacity  onPress={() => {
+                <TouchableOpacity onPress={() => {
                     navigation.navigate("Home")
                 }}>
-                <MaterialIcons name="keyboard-backspace" size={24} color="black" />
+                    <MaterialIcons name="keyboard-backspace" size={24} color="black" />
                 </TouchableOpacity>
                 <Text style={{ fontSize: 35, fontWeight: "bold" }}>Profile</Text>
             </View>
 
-            <Text style={{ backgroundColor: "#d6d4ce", height: 1, }}></Text>
+            <Text style={{ backgroundColor: "#d6d4ce", height: 2, }}></Text>
 
             <View style={{ alignItems: 'center', }}>
                 <Image source={require('../../assets/DP.jpg')}
-                    style={{ height: 80, width: 80, borderRadius: 40, marginTop: 15 }} />
+                    style={{ height: 80, width: 80, borderRadius: 40, marginTop: 35 }} />
                 <Text style={{ fontWeight: "bold", fontSize: 30 }}>Doreen Mensah</Text>
                 <Text style={{ fontSize: 20 }}>CEO</Text>
             </View>
