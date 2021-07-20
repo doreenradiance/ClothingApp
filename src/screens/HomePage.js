@@ -1,6 +1,6 @@
 import React from "react"
-import { StyleSheet, Text, Image, View, TouchableOpacity,FlatList } from 'react-native';
-// import SingleType from "../components/SingleType";
+import { StyleSheet, Text, Image, View, TouchableOpacity, FlatList } from 'react-native';
+import SingleType from "../components/SingleType";
 
 
 const HomePage = ({ navigation }) => {
@@ -59,6 +59,7 @@ const HomePage = ({ navigation }) => {
 
     ]
 
+
     return (
         <View style={styles.mainContainer}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: 30 }}>
@@ -81,12 +82,13 @@ const HomePage = ({ navigation }) => {
 
 
             <FlatList
+                numColumns={2}
                 data={DressTypes}
                 renderItem={({ item }) => {
                     return <SingleType
                         image={item.image}
                         type={item.type}
-                        price={item.type}
+                        price={item.price}
                         button={item.button}
                         navigation={navigation}
                     />
@@ -100,11 +102,12 @@ const HomePage = ({ navigation }) => {
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
+
     },
-    container: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-    }
+    // container: {
+    //     flexDirection: "row",
+    //     justifyContent: "space-around",
+    // }
 })
 
 export default HomePage;
