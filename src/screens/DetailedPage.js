@@ -11,7 +11,8 @@ function DetailedPage(
     return (
 
         <View style={styles.container}>
-            <View style={{ flexDirection: "row",  justifyContent: 'space-around' }}>
+            
+            <View style={{ flexDirection: "row",  justifyContent: 'space-around',marginTop:60,height:50 }}>
                 <TouchableOpacity onPress={() => {
                     navigation.navigate("Home", { image, type, price, button })
                 }}>
@@ -19,14 +20,14 @@ function DetailedPage(
                 </TouchableOpacity>
                 <Text style={{ fontSize: 30, fontWeight: "bold" }}>Checkout</Text>
             </View>
-            <Text style={{ backgroundColor: "#d6d4ce", height: 2, }}></Text>
-            <View>
+            <Text style={{ backgroundColor: "#d6d4ce", height: 2,marginTop:20 }}></Text>
+            <View style= {{marginTop:60}}>
                 <Image source={DressTypes.image}
                     style={{ height: 250, width: 200, alignSelf: "center" }} />
-                <Text style={{ fontWeight: "bold", fontSize: 20, alignSelf: "center" }}>{DressTypes.type}</Text>
-                <Text style={{ fontSize: 20, alignSelf: "center"}}>{DressTypes.price}</Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, alignSelf: "center",marginTop:30 }}>{DressTypes.type}</Text>
+                <Text style={{ fontSize: 20, alignSelf: "center",marginTop:10 }}>{DressTypes.price}</Text>
             </View>
-            <View>
+            <View style={{marginTop:40}}>
                 <View style={{ marginHorizontal:10}}>
 
                         <Button style={{  }}
@@ -44,7 +45,7 @@ function DetailedPage(
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent:"space-evenly"
+        // justifyContent:"space-evenly"
     }
 })
 
