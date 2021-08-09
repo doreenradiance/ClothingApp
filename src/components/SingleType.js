@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 
-function SingleType({ image, type, price, button, navigation }) {
+function SingleType({ image, type, price, button, navigation, index }) {
     return (
 
-        <ScrollView>
-            <View style={styles.container}>
+        <View  style={[styles.container, index%2===0 && { borderRightColor: "#d6d4ce", borderRightWidth: 2,  }]}>
+            <View>
                 <TouchableOpacity
                     onPress={() => {
                         navigation.navigate("Detailed", { image, type, price, button })
@@ -18,20 +18,21 @@ function SingleType({ image, type, price, button, navigation }) {
                     <Text>{price}</Text>
                     <Text style={{ color: "white",marginBottom:10, backgroundColor: "#6788f0", borderRadius: 10, width: 90, height: 22, textAlign: "center" }}>{button}</Text>
                 </TouchableOpacity>
-                <Text style={{ backgroundColor: "#d6d4ce", width: 2,  }}></Text> 
+                {/* <Text style={{ backgroundColor: "#d6d4ce", width: 2,  }}></Text>  */}
             </View>
          
-        <Text style={{ backgroundColor: "#d6d4ce", height: 2,  }}></Text> 
-        </ScrollView>
+        {/* <Text style={{ backgroundColor: "#d6d4ce", height: 2,  }}></Text> */}
+        </View>
 
 
     )
 }
 const styles = StyleSheet.create({
     container: {
+        flex:1,
         flexDirection: "row",
-        justifyContent: "space-around",
-        flexWrap: "wrap"
+        justifyContent: "center",
+        
     }
 })
 

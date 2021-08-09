@@ -84,14 +84,19 @@ const HomePage = ({ navigation }) => {
             <FlatList
                 numColumns={2}
                 data={DressTypes}
-                renderItem={({ item }) => {
+                renderItem={({ item, index }) => {
                     return <SingleType
                         image={item.image}
                         type={item.type}
                         price={item.price}
                         button={item.button}
                         navigation={navigation}
+                        index={index}
                     />
+                }}
+                
+                ItemSeparatorComponent={()=>{
+                    return <View style={{ backgroundColor: "#d6d4ce", width: '100%', height:2, flex:1  }}></View>
                 }}
             />
 
