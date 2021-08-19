@@ -63,11 +63,9 @@ const HomePage = ({ navigation }) => {
     return (
         <View style={styles.mainContainer}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: 30 }}>
-                <TouchableOpacity onPress={() => {
-                    navigation.navigate("Welcome")
-                }}>
+                
                     <Image source={require('../../assets/logo.jpeg')} style={{ height: 40, width: 40, }} />
-                </TouchableOpacity>
+    
                 <Text style={{ fontSize: 30, fontWeight: "bold" }}>Home</Text>
                 <TouchableOpacity
                     onPress={() => {
