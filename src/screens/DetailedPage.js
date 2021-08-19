@@ -30,8 +30,10 @@ function DetailedPage(
             <View style={{ marginTop:30}}>
                 <View style={{ marginHorizontal:15}}>
 
+
                         <Button style={{  }}
-                        onPress={() => Alert.alert("Paid")
+                        onPress={() => navigate.navigate("Signup")
+                            // Alert.alert("Paid")
                         }
                         title="Proceed to pay"
                         color="#a83256"
