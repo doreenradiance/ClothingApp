@@ -7,7 +7,7 @@ function ProfilePage({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: "row", marginTop: 50, justifyContent: 'space-evenly' }}>
-                <TouchableOpacity onPress={() => {
+                <TouchableOpacity  style={{marginTop:10}} onPress={() => {
                     navigation.navigate("Home")
                 }}>
                     <MaterialIcons name="keyboard-backspace" size={24} color="black" />
@@ -15,7 +15,7 @@ function ProfilePage({ navigation }) {
                 <Text style={{ fontSize: 35, fontWeight: "bold" }}>Profile</Text>
             </View>
 
-            <Text style={{ backgroundColor: "#d6d4ce", height: 2, marginTop:10}}></Text>
+            <View style={{ backgroundColor: "#d6d4ce", height: 2, marginTop:10}}></View>
 
             <View style={{ alignItems: 'center', }}>
                 <Image source={require('../../assets/DP.jpg')}
