@@ -2,11 +2,13 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-
 import HomePage from "./src/screens/HomePage";
 import DetailedPage from "./src/screens/DetailedPage";
 import ProfilePage from "./src/screens/ProfilePage";
 import SingleType from './src/components/SingleType';
+// import LoginPage from "./src/screens/LoginPage"
+// import SignupPage from "./src/screens/SignupPage"
+
 
 const Stack = createStackNavigator()
 
@@ -16,14 +18,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
 
-        {/* <Stack.Screen
-          options={{
-            header: () => null
-          }}
-          name="Welcome" component={WelcomePage}
-        /> */}
-
-         <Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
@@ -42,14 +37,28 @@ export default function App() {
             header: () => null
           }}
           name="Profile" component={ProfilePage}
-        /> 
+        />
 
-<Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
           name="Type" component={SingleType}
         />
+
+        {/* <Stack.Screen
+          options={{
+            header: () => null
+          }}
+          name="Signup" component={SignupPage}
+        />
+
+        <Stack.Screen
+          options={{
+            header: () => null
+          }}
+          name="Login" component={LoginPage}
+        /> */}
       </Stack.Navigator>
 
 
