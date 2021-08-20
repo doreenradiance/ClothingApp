@@ -32,7 +32,7 @@ function DetailedPage(
 
 
                         <Button style={{  }}
-                        onPress={() => navigate.navigate("Signup")
+                        onPress={() => navigate.navigate("SignupLogin")
                             // Alert.alert("Paid")
                         }
                         title="Proceed to pay"
