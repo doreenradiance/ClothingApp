@@ -1,16 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { View } from 'react-native'
 
-class LoginPage extends Component {
-    render() {
-        return (
-            <View>
+function LoginPage() {
+    return (
+        <View>
                 <View>
                     <Text>Login</Text>
                 </View>
             </View>
-        )
-    }
+    )
 }
 
-export default LoginPage;
+export default LoginPage
+
+
+// class LoginPage extends Component ({navigation}){
+//     render() {
+//         return (
+//             <View>
+//                 <View>
+//                     <Text>Login</Text>
+//                 </View>
+//             </View>
+//         )
+//     }
+// }
+
+// export default LoginPage;
