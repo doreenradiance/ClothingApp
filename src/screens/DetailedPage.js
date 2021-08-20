@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, Image, View, TouchableOpacity, Button, Alert } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, Button, } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
@@ -32,7 +32,7 @@ function DetailedPage(
 
 
                         <Button style={{  }}
-                        onPress={() => navigate.navigate("SignupLogin")
+                        onPress={() => navigation.navigate("SignupLogin")
                             // Alert.alert("Paid")
                         }
                         title="Proceed to pay"
