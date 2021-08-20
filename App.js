@@ -7,8 +7,8 @@ import DetailedPage from "./src/screens/DetailedPage";
 import ProfilePage from "./src/screens/ProfilePage";
 import SingleType from './src/components/SingleType';
 import SignupLogin from "./src/screens/SignupLogin";
-// import SignupPage from "./src/screens/SignupPage";
-// import LoginPage from "./src/screens/LoginPage"
+import SignupPage from "./src/screens/SignupPage";
+import LoginPage from "./src/screens/LoginPage"
 
 
 const Stack = createStackNavigator()
@@ -54,19 +54,19 @@ export default function App() {
           name="SignupLogin" component={SignupLogin}
         />
 
-        {/* <Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
-          name="SignupPage" component={SignupPage}
-        /> */}
+          name="Signup" component={SignupPage}
+        />
 
-        {/* <Stack.Screen
+        <Stack.Screen
           options={{
             header: () => null
           }}
           name="Login" component={LoginPage}
-        /> */}
+        />
       </Stack.Navigator>
 
 
