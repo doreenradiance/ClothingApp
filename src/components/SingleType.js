@@ -16,7 +16,7 @@ function SingleType({ image, type, price, button, navigation, index }) {
                     <Image source={image} style={{ height: 120, width: 100, marginTop: 20 }} />
                     <Text style={{ fontWeight: "bold", fontSize: 20 }}>{type}</Text>
                     <Text>{price}</Text>
-                    <Text style={{ color: "white",marginBottom:10, backgroundColor: "#a85c1e", borderRadius: 10, width: 90, height: 22, textAlign: "center" }}>{button}</Text>
+                    <Text style={{ color: "white",marginBottom:10, backgroundColor: "#a83256", borderRadius: 10, width: 90, height: 22, textAlign: "center" }}>{button}</Text>
                 </TouchableOpacity>
                
             </View>
