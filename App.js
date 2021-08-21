@@ -56,8 +56,12 @@ export default function App() {
 
         <Stack.Screen
           options={{
-            header: () => null
-          }}
+            title: "SIGN UP",
+            headerStyle: {
+              backgroundColor: "#a83256"
+            },
+            headerTintColor: "white",
+            headerTitleAlign: "center",}}
           name="Signup" component={SignupPage}
         />
 
