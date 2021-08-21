@@ -27,7 +27,7 @@ function SignupLogin({ navigation }) {
                             navigation.navigate("Login")
                         }}
                     >
-                        <Text style={{color:"#a85c1e",alignSelf:"center", marginTop:15}}>Login</Text>
+                        <Text style={{color:"#a83256",alignSelf:"center", marginTop:15}}>Login</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
     },
 
     header: {
-        backgroundColor: "#a85c1e",
+        backgroundColor: "#a83256",
         height: 80,
         width: "100%",
         flex: 0.6,
         justifyContent: "space-around"
     },
     signupTextButton: {
-        backgroundColor: "#a85c1e",
+        backgroundColor: "#a83256",
         height: 50,
         width: 250,
         textAlign: "center",
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         borderRadius: 4,
         borderWidth: 2,
-        borderColor: "#a85c1e",
+        borderColor: "#a83256",
         marginTop: 50
     },
 })
